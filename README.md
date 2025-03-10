@@ -39,11 +39,6 @@ python train.py
 ```
 Grab some coffee ☕ — training takes ~15 minutes on a decent CPU, or ~5 mins with an NVIDIA GPU.
 
-### Step 6: Test Your Model
-```bash
-python evaluate.py
-```
-
 ---
 
 ## 🗂️ What’s Inside?
