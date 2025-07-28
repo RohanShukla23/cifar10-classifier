@@ -1,48 +1,47 @@
-# 🖼️ CIFAR-10 Image Classifier 
+# CIFAR-10 Image Classifier 
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12%2B-orange.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A PyTorch-based neural network that classifies images from the CIFAR-10 dataset. Perfect for learning CNNs or as a starter project for image classification tasks! 🚀
+A PyTorch-based neural network that classifies images from the CIFAR-10 dataset.
 
 ---
 
-## 💻 How to Run This Project
-
-**Let’s get you up and running in 5 minutes!**  
+## 💻 how to run
+ 
 *(Tested on macOS/Linux with Python 3.8+)*
 
-### Step 1: Clone and Navigate
+### step 1: clone & navigate
 ```bash
 git clone https://github.com/RohanShukla23/cifar10-classifier.git
 cd cifar10-classifier
 ```
 
-### Step 2: Set Up a Virtual Environment (Optional but recommended)
+### step 2: set up a virtual environment (optional but recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate  # macOS/Linux
 ```
 
-### Step 3: Install Dependencies
+### Step 3: install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Download the Dataset
-The CIFAR-10 dataset will **auto-download** when you first run the project. Just make sure you have ~170MB of free space!
+### Step 4: download dataset
+The CIFAR-10 dataset will auto-download when you first run the project. Just make sure you have ~170MB of free space.
 
 ### Step 5: Train the Model
 ```bash
 python train.py
 ```
-Grab some coffee ☕ — training takes ~15 minutes on a decent CPU, or ~5 mins with an NVIDIA GPU.
+brew some coffee ☕ — training takes ~15 minutes on a decent CPU, or ~5 mins with an NVIDIA GPU.
 
 ---
 
-## 🗂️ What’s Inside?
-Here’s how the project is organized:
+## 🗂️ what’s inside?
+project organization:
 ```
 cifar10-classifier/
 ├── data/           # Auto-downloaded CIFAR-10 dataset
@@ -54,8 +53,8 @@ cifar10-classifier/
 
 ---
 
-## 🤝 Contributing
-Found a bug? Want to add a new model? Awesome!  
+## 🤝 contributions
+found a bug? want to add a new model? great!  
 1. Fork the repo  
 2. Create a branch (`git checkout -b cool-new-feature`)  
 3. Commit your changes  
@@ -66,13 +65,13 @@ Found a bug? Want to add a new model? Awesome!
 
 ## 📜 License
 MIT License - see [LICENSE](LICENSE) for details.  
-*Go wild, but credit me if you reuse this code!*
+*credit me if you reuse this code please*
 
 ---
 
 ## 🙏 Acknowledgments
 - CIFAR-10 dataset by Alex Krizhevsky
 - PyTorch community for amazing tutorials
-- Coffee, for keeping me awake through debugging
+- my coffee machine :)
 
 ---
