@@ -9,21 +9,21 @@ from utils import save_model, calculate_metrics
 import yaml
 
 def train_model(config):
-    # Transformations
+    # transformations
     transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
 
-    # Load dataset
+    # load dataset
     train_set = datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
     test_set = datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 
-    # Create data loaders
+    # create data loaders
     train_loader = DataLoader(train_set, batch_size=config['batch_size'], shuffle=True)
     test_loader = DataLoader(test_set, batch_size=config['batch_size'], shuffle=False)
 
-    # Initialize model, loss, optimizer
+    # initialize model, loss, optimizer
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = CNN(num_classes=10).to(device)
     criterion = nn.CrossEntropyLoss()
@@ -49,25 +49,25 @@ def train_model(config):
             
             running_loss += loss.item() * images.size(0)
 
-        # Calculate epoch metrics
+        # calculate epoch metrics
         epoch_loss = running_loss / len(train_loader.dataset)
         train_accuracy = calculate_metrics(model, train_loader, device)
         val_accuracy = calculate_metrics(model, test_loader, device)
 
-        # Log to TensorBoard
+        # log to TensorBoard
         writer.add_scalar('Loss/train', epoch_loss, epoch)
         writer.add_scalar('Accuracy/train', train_accuracy, epoch)
         writer.add_scalar('Accuracy/val', val_accuracy, epoch)
 
-        # Save best model
+        # save best model
         if val_accuracy > best_accuracy:
             best_accuracy = val_accuracy
             save_model(model, f"models/best_model.pth")
 
         print(f"Epoch {epoch+1}/{config['epochs']} | "
               f"Loss: {epoch_loss:.4f} | "
-              f"Train Acc: {train_accuracy:.2f}% | "
-              f"Val Acc: {val_accuracy:.2f}%")
+              f"Train Accuracy: {train_accuracy:.2f}% | "
+              f"Val Accuracy: {val_accuracy:.2f}%")
 
     writer.close()
     return model
