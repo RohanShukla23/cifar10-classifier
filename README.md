@@ -44,11 +44,14 @@ brew some coffee like I did ☕ — training takes ~15 minutes on a decent CPU (
 project organization:
 ```
 cifar10-classifier/
-├── data/           # Auto-downloaded CIFAR-10 dataset
-├── models/         # Model definitions (ResNet, CustomCNN, etc.)
-├── utils/          # Helper scripts (data loaders, metrics)
-├── train.py        # Training script
-└── requirements.txt
+├── cifar/ # Auto‑downloaded CIFAR‑10 dataset
+├── configs/ # Configuration files (e.g. training hyperparameters)
+├── logs/ # Training and evaluation logs
+├── models/ # Saved model checkpoints
+├── src/ # Source code (data loaders, models, training & eval scripts)
+├── .gitattributes # Git attributes configuration
+├── LICENSE # MIT license file
+└── README.md # This file
 ```
 
 ---
