@@ -32,11 +32,11 @@ pip install -r requirements.txt
 ### Step 4: download dataset
 The CIFAR-10 dataset will auto-download when you first run the project. Just make sure you have ~170MB of free space.
 
-### Step 5: Train the Model
+### Step 5: train the model
 ```bash
 python train.py
 ```
-brew some coffee ☕ — training takes ~15 minutes on a decent CPU, or ~5 mins with an NVIDIA GPU.
+brew some coffee like I did ☕ — training takes ~15 minutes on a decent CPU (or ~5 mins with an NVIDIA GPU).
 
 ---
 
@@ -59,7 +59,7 @@ found a bug? want to add a new model? great!
 2. Create a branch (`git checkout -b cool-new-feature`)  
 3. Commit your changes  
 4. Push to your branch  
-5. Open a Pull Request  
+5. Open a PR  
 
 ---
 
@@ -71,7 +71,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 - CIFAR-10 dataset by Alex Krizhevsky
-- PyTorch community for amazing tutorials
 - my coffee machine :)
 
 ---
